@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  background-color: #000; /* global black background to remove white gaps */
+  color: #fff;
+  overflow-x: hidden; /* prevent horizontal white area when scrolling */
+}
+
+/* WebKit (Chrome, Edge, Safari) scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* gray-600 */
+  border-radius: 10px;
+  border: 3px solid #0b0b0b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280; /* gray-500 */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #0b0b0b;
+}
+
+/* keep custom range track rule but avoid white background */
+#range::-moz-range-runnable-track{
+  border: none;
+  background-color: #4b5563;
+}
