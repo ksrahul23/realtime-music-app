@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  background-color: #050505; /* Deeper black for high contrast */
+  color: #fff;
+  overflow-x: hidden; 
+}
+
+/* WebKit scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+  border: 2px solid #000;
+  transition: all 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #dfff00; /* Neon yellow on hover */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333 #000;
+}
+
+#range::-moz-range-runnable-track{
+  border: none;
+  background-color: #333;
+}
